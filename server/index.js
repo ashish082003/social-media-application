@@ -52,6 +52,9 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("We are in the server");
+});
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT;
 mongoose
